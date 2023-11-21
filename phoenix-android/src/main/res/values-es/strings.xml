@@ -18,5 +18,152 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- system notification channels -->
+
+    <string name="notification_channels_watcher_title">Observador de canales</string>
+    <string name="notification_channels_watcher_desc">Aparece cuando necesitas iniciar Phoenix.</string>
+
+    <string name="notification_pending_settlement_title">Liquidación pendiente</string>
+    <string name="notification_pending_settlement_desc">Le indica cuándo es necesario iniciar Phoenix para liquidar un pago.</string>
+
+    <string name="notification_missed_payment_title">Pago rechazado</string>
+    <string name="notification_missed_payment_desc">Aparece cuando Phoenix no puede recibir un pago debido a problemas de liquidez.</string>
+
+    <string name="notification_received_payment_title">Pago recibido</string>
+    <string name="notification_received_payment_desc">Aparece cuando recibe un pago mientras la aplicación está en segundo plano.</string>
+
+    <string name="notification_headless_title">Corriendo en segundo plano</string>
+    <string name="notification_headless_desc">Le indica cuando Phoenix se está ejecutando en segundo plano.</string>
+
+    <string name="notification_swap_timeout_title">Tiempo de espera del intercambio</string>
+    <string name="notification_swap_timeout_desc">Le indica cuándo se agota el tiempo de espera de un intercambio.</string>
+
+    <!-- init wallet / automated wallet creation -->
+
+    <string name="autocreate_generating">Creando tu billetera…</string>
+    <string name="autocreate_error">Error al crear la billetera</string>
+
+    <string name="restore_title">Restaurar mi billetera</string>
+    <string name="restore_disclaimer_next">Siguiente</string>
+    <string name="restore_in_progress">Restaurando tu billetera…</string>
+
+    <!-- Auth prompt (v2) -->
+
+    <string name="authprompt_title">Desbloquear para continuar</string>
+
+    <!-- Startup -->
+
+    <string name="startup_wait_prefs">Inicializando…</string>
+    <string name="startup_binding_service">Servicio obligatorio…</string>
+    <string name="startup_wait">Preparando billetera…</string>
+    <string name="startup_wait_legacy_check">Chequeando billetera heredada…</string>
+    <string name="startup_switching_to_legacy">Cambiar a la billetera heredada…</string>
+    <string name="startup_manual_unlock_button">Desbloquear</string>
+    <string name="startup_checking_seed">Desbloqueando…</string>
+    <string name="startup_unlocked">Acceso permitido…</string>
+    <string name="startup_unlock_failure">Desbloqueo fallido</string>
+    <string name="startup_unlock_failure_keystore">Error del almacén de claves de Android</string>
+    <string name="startup_unlock_failure_unhandled_version">Versión de semilla sin controlar (%1$s)</string>
+    <string name="startup_unlock_failure_unhandled_version_details">Contacte con soporte por correo para asistencia</string>
+    <string name="startup_unlock_failure_fallback">Desbloquear con la semilla</string>
+
+    <string name="startup_fallback_instructions">Ingrese las 12 palabras de recuperación para desbloquear la billetera.\n\nLas palabras deben estar en el orden correcto y separadas con un solo espacio.</string>
+    <string name="startup_fallback_input_label">Entre la palabra #%1$d</string>
+    <string name="startup_fallback_input_label_error">No más de 12 palabras!</string>
+    <string name="startup_fallback_incomplete">Ingrese la semilla para continuar.</string>
+    <string name="startup_fallback_invalid">La semilla no es válida. Asegurese de colocar las palabras en el orden correcto</string>
+    <string name="startup_fallback_unlock_button">Desbloquear billetera</string>
+    <string name="startup_fallback_checking">Verificando la semilla…</string>
+    <string name="startup_fallback_error_default">A ocurrido un error. Por favor, intente de nuevo.</string>
+    <string name="startup_fallback_error_incorrect_seed">Esta semilla no coincide con tu billetera.</string>
+    <string name="startup_fallback_success_match">Semilla correcta.\nEscribiendo en disco…</string>
+    <string name="startup_fallback_success_starting">Iniciando Phoenix…</string>
+
+    <string name="startup_starting">Iniciando…</string>
+    <string name="startup_error_generic">La aplicación no se pudo iniciar.</string>
+
+    <!-- Switch between legacy/modern apps -->
+
+    <string name="legacyswitch_title">App heredada</string>
+    <string name="legacyswitch_restart">Reiniciar app heredada</string>
+
+    <!-- Payment line -->
+
+    <string name="paymentline_prefix_sent">-</string>
+    <string name="paymentline_prefix_received">+</string>
+    <string name="paymentline_desc_pending_onchain">Esperando la confirmación</string>
+    <string name="paymentline_desc_pending_offchain">Pago pendiente</string>
+    <string name="paymentline_desc_success_onchain">Pago confirmado</string>
+    <string name="paymentline_desc_success_offchain">Pago completado</string>
+    <string name="paymentline_desc_failed">Pago fallido</string>
+
+    <!-- Receive screen -->
+
+    <string name="receive_help_qr">Código QR de la factura/dirección</string>
+
+    <string name="receive_bitcoin_title">Bitcoin</string>
+    <string name="receive_bitcoin_help">Este código QR es de una dirección Bitcoin clásica.\n\nPuede ser usada por casi cualquier servicio/billetera de Bitcoin, pero los pagos tardarán más en llegar.</string>
+    <string name="receive_bitcoin_address_label">Dirección</string>
+    <string name="receive_bitcoin_error">No se pudo generar una dirección bitcoin</string>
+    <string name="receive_bitcoin_share_title">Dirección Bitcoin</string>
+    <string name="receive_bitcoin_share_subject">Compartir esta dirección Bitcoin con…</string>
+
+    <string name="receive_lightning_title">Lightning</string>
+    <string name="receive_lightning_help">Este código QR es una factura Lightning.\n\nLos pagos Lightning son muy rápidos y generalmente más baratos, pero es posible que algunas billeteras y servicios aún no los admitan.\n\nEn ese caso, deslícese hacia la derecha para obtener una dirección Bitcoin.</string>
+    <string name="receive_lightning_generating">Generando…</string>
+    <string name="receive_lightning_amount_label">Monto</string>
+    <string name="receive_lightning_desc_label">Descripción</string>
+    <string name="receive_lightning_error">No se pudo generar la factura</string>
+    <string name="receive_lightning_share_subject">Factura Lightning</string>
+    <string name="receive_lightning_share_title">Compartir esta factura Lightning con…</string>
+    <string name="receive_lnurl_button">Usar enlace LNURL</string>
+
+    <string name="receive_lightning_edit_button">Editar</string>
+    <string name="receive_lightning_edit_title">Editar factura</string>
+    <string name="receive_lightning_edit_amount_label">Monto (opcional)</string>
+    <string name="receive_lightning_edit_amount_placeholder">Monto a recibir</string>
+    <string name="receive_lightning_edit_desc_label">Descripción (opcional)</string>
+    <string name="receive_lightning_edit_desc_placeholder">Entre una descripción para esta factura</string>
+    <string name="receive_lightning_edit_generate_button">Crear factura</string>
+
+    <!-- send -->
+
+    <string name="send_balance_prefix">Balance:</string>
+    <string name="send_error_amount_too_large">El importe es demasiado grande.</string>
+    <string name="send_error_amount_negative">El importe no puede ser negativo.</string>
+    <string name="send_error_amount_invalid">El importe no es válido.</string>
+    <string name="send_error_amount_over_balance">El importe excede el balance.</string>
+    <string name="send_error_amount_overpaying">No puedo pagar más de %1$s.</string>
+    <string name="send_error_amount_below_requested">El importe está por debajo de la cantidad solicitada de %1$s.</string>
+    <string name="send_destination_label">Enviar a</string>
+    <string name="send_description_label">Descripción</string>
+    <string name="send_trampoline_fee_label">Comisión</string>
+    <string name="send_trampoline_fee_no_amount">N/A</string>
+    <string name="send_trampoline_fee_loading">Cargando comisión…</string>
+    <string name="send_trampoline_amountless_warning_label">Factura sin importe</string>
+    <string name="send_trampoline_amountless_warning_details">La factura de este pago no solicita un importe específico. Esto puede ser aprovechado por nodos maliciosos durante el pago.\n\nPara estar seguro, <b>pida al destinatario que especifique un importe</b> al generar la factura.</string>
+    <string name="send_connecting_button">Esperando por los canales…</string>
+    <string name="send_pay_button">Pagar</string>
+
+    <string name="send_paymentmode_onchain">Pagar on-chain</string>
+    <string name="send_paymentmode_onchain_desc">Las transacciones on-chain suelen ser más lentos y más adecuadas para pagos grandes.</string>
+    <string name="send_paymentmode_lightning">Pagar con Lightning</string>
+    <string name="send_paymentmode_lightning_desc">Los pagos lightning son rápidos y adecuados para pagos pequeños.</string>
+
+    <string name="send_spliceout_address_label">Dirección</string>
+    <string name="send_spliceout_feerate_label">Tasa de comisión</string>
+    <string name="send_spliceout_feerate_waiting_for_value">Obteniendo la tasa de comisión actual…</string>
+
+    <string name="send_spliceout_error_invalid_feerate">Por favor entre una tasa de comisión válida.</string>
+    <string name="send_spliceout_error_cannot_afford_fees">El total excede el balance</string>
+    <string name="send_spliceout_error_failure">El pago ha fallado</string>
+
+    <string name="send_spliceout_prepare_button">Preparar transacción</string>
+    <string name="send_spliceout_prepare_in_progress">Preparando transacción…</string>
+    <string name="send_spliceout_execute_in_progress">Ejecutando empalme…</string>
+    <string name="send_spliceout_complete_recap_amount">Importe</string>
+    <string name="send_spliceout_complete_recap_fee">Comisión de minería</string>
+    <string name="send_spliceout_complete_recap_fee_details">Utiliza una tasa efectiva de %1$s sat/vbyte.</string>
+    <string name="send_spliceout_complete_recap_total">Total</string>
 
 </resources>
